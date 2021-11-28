@@ -9,6 +9,4 @@ const Preloader = (props) => {
   );
 };
 
-Preloader.propTypes = {};
-
 export default Preloader;
