@@ -5,6 +5,10 @@ const AddLogModal = () => {
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState('');
 
+  const onSubmit = () => {
+    console.log(message, tech, attention);
+  };
+
   return (
     <div id='add-log-modal' className='modal' style={modalStyle}>
       <div className='modal-content'>
@@ -50,7 +54,7 @@ const AddLogModal = () => {
                   className='filled-in'
                   checked={attention}
                   value={attention}
-                  onChange={(e) => setAttention(attention)}
+                  onChange={(e) => setAttention(!attention)}
                 />
                 <span>Needs Attention</span>
               </label>
@@ -58,12 +62,11 @@ const AddLogModal = () => {
           </div>
         </div>
       </div>
-
       <div className='modal-footer'>
         <a
-          href='#'
-          onClick={onsubmit}
-          className='modal-close waves-effect waves-green btn-flat'
+          href='#!'
+          onClick={onSubmit}
+          className='modal-close waves-effect blue waves-light btn'
         >
           Enter
         </a>
