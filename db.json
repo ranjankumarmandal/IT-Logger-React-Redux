@@ -32,18 +32,18 @@
   "techs": [
     {
       "id": 1,
-      "firstName": "Ranjan Kumar",
-      "lastName": "Mandal"
+      "firstname": "Ranjan Kumar",
+      "lastname": "Mandal"
     },
     {
       "id": 2,
-      "firstName": "Shree",
-      "lastName": "Satya"
+      "firstname": "Shree",
+      "lastname": "Satya"
     },
     {
       "id": 3,
-      "firstName": "Sara",
-      "lastName": "Wilson"
+      "firstname": "Sara",
+      "lastname": "Wilson"
     }
   ]
 }
