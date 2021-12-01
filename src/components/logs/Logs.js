@@ -2,20 +2,12 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import LogItem from './LogItem';
 import Preloader from '../layout/Preloader';
+import { getLogs } from '../../actions/logActions';
 
 const Logs = ({ log: { logs, loading } }) => {
   useEffect(() => {
     getLogs();
   }, []);
-
-  const getLogs = async () => {
-    setLoading(true);
-    const res = await fetch('http://localhost:5000/logs');
-    const data = await res.json();
-
-    setLogs(data);
-    setLoading(false);
-  };
 
   if (loading) {
     return <Preloader />;
