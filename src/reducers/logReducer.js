@@ -47,7 +47,7 @@ export default (state = initialState, action) => {
     case SEARCH_LOGS:
       return {
         ...state,
-        logs: state.payload,
+        logs: action.payload,
       };
     case SET_CURRENT:
       return {
