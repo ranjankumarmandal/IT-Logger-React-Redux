@@ -11,7 +11,9 @@ export const getTechs = () => async (dispatch) => {
   try {
     setLoading();
 
-    const res = await fetch('http://localhost:5000/techs');
+    const res = await fetch(
+      'https://ranjan-it-logger-backend.herokuapp.com/techs'
+    );
     const data = await res.json();
 
     dispatch({
@@ -31,13 +33,16 @@ export const addTech = (tech) => async (dispatch) => {
   try {
     setLoading();
 
-    const res = await fetch('http://localhost:5000/techs', {
-      method: 'POST',
-      body: JSON.stringify(tech),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const res = await fetch(
+      'https://ranjan-it-logger-backend.herokuapp.com/techs',
+      {
+        method: 'POST',
+        body: JSON.stringify(tech),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
     const data = await res.json();
 
     dispatch({
@@ -57,7 +62,7 @@ export const deleteTech = (id) => async (dispatch) => {
   try {
     setLoading();
 
-    await fetch(`http://localhost:5000/techs/${id}`, {
+    await fetch(`https://ranjan-it-logger-backend.herokuapp.com/techs/${id}`, {
       method: 'DELETE',
     });
     dispatch({
