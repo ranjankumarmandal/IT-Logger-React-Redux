@@ -27,7 +27,7 @@ export const getTechs = () => async (dispatch) => {
 };
 
 // add tech
-export const addTechs = (tech) => async (dispatch) => {
+export const addTech = (tech) => async (dispatch) => {
   try {
     setLoading();
 
